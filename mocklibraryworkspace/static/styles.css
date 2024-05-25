@@ -38,6 +38,22 @@ nav ul li a {
     font-weight: bold;
 }
 
+.profile {
+    margin: 2rem auto;
+    width: 50%;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    Color: #000
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #000; 
+}
+
 /* Hero Section */
 .hero {
     text-align: center;

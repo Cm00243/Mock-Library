@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - My Library</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script>
-        function toggleRegisterForm() {
-            var registerForm = document.getElementById("register-form");
-            if (registerForm.style.display === "none" || registerForm.style.display === "") {
-                registerForm.style.display = "block";
-            } else {
-                registerForm.style.display = "none";
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -44,22 +34,7 @@
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-        <button onclick="toggleRegisterForm()" class="btn">Register</button>
-    </section>
-
-    <section id="register-form" class="register-form" style="display: none;">
-        <h2>Register</h2>
-        <form action="/register" method="post">
-            <div class="form-group">
-                <label for="new-username">New Username:</label>
-                <input type="text" id="new-username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="new-password">New Password:</label>
-                <input type="password" id="new-password" name="password" required>
-            </div>
-            <button type="submit" class="btn">Register</button>
-        </form>
+        <a href="{{ url_for('register') }}" class="btn">Register</a>
     </section>
 
     <footer>

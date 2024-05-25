@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - My Library</title>
+    <title>Profile - My Library</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
@@ -15,25 +15,18 @@
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('books_page') }}">Books</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
                 <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="register-form">
-        <h2>Register</h2>
-        <form action="/register" method="post">
-            <div class="form-group">
-                <label for="new-username">Username:</label>
-                <input type="text" id="new-username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="new-password">Password:</label>
-                <input type="password" id="new-password" name="password" required>
-            </div>
-            <button type="submit" class="btn">Register</button>
-        </form>
+    <section class="profile">
+        <h2>Your Profile</h2>
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ name }}</p>
+        </div>
     </section>
 
     <footer>
