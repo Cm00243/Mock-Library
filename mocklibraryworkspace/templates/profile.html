@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - My Library</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+{% block title %}Profile - My Library{% endblock %}
 
-<body>
-    <header>
-        <h1>Welcome to My Library</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('books_page') }}">Books</a></li>
-                <li><a href="{{ url_for('profile') }}">Profile</a></li>
-                <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="profile">
-        <h2>Your Profile</h2>
-        <div class="profile-info">
-            <p><strong>Username:</strong> {{ name }}</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Library. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
+{% block content %}
+<section class="profile">
+    <h2>Your Profile</h2>
+    <div class="profile-info">
+        <p><strong>Username:</strong> {{ name }}</p>
+    </div>
+</section>
+{% endblock %}

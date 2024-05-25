@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Library</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('books_page') }}">Books</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}Contact - My Library{% endblock %}
 
-    <section>
-        <h2>Get in Touch</h2>
-        <p>If you have any questions, feel free to reach out to us at contact@library.com.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Library. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
+{% block content %}
+<section>
+    <h2>Get in Touch</h2>
+    <p>If you have any questions, feel free to reach out to us at contact@library.com.</p>
+</section>
+{% endblock %}

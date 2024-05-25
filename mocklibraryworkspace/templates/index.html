@@ -1,57 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Library</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+{% block title %}Home - My Library{% endblock %}
 
-<body>
-    <header>
-        <h1>Welcome to My Library</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('books_page') }}">Books</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
+<section class="hero">
+    <h2>Explore the World of Books</h2>
+    <p>Discover our vast collection of books covering various genres and topics.</p>
+    <a href="{{ url_for('books_page') }}" class="btn">Browse Books</a>
+</section>
 
-    <section class="hero">
-        <h2>Explore the World of Books</h2>
-        <p>Discover our vast collection of books covering various genres and topics.</p>
-        <a href="{{ url_for('books_page') }}" class="btn">Browse Books</a>
-    </section>
-
-    <section class="featured-books">
-        <h2>Featured Books</h2>
-        <div class="book">
-            <img src="{{ url_for('static', filename='images/catchingfire.jpg') }}" alt="Catching Fire">
-            <h3>Catching Fire</h3>
-            <p>Author: Suzanne Collins</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-        <div class="book">
-            <img src="{{ url_for('static', filename='images/thehungergames.jpg') }}" alt="Book 2">
-            <h3>The Hunger Games</h3>
-            <p>Author: Suzanne Collins</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-        <div class="book">
-            <img src="{{ url_for('static', filename='images/mockingjay.jpg') }}" alt="Book 3">
-            <h3>Mockingjay</h3>
-            <p>Author: Suzanne Collins</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Library. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
+<section class="featured-books">
+    <h2>Featured Books</h2>
+    <div class="book">
+        <img src="{{ url_for('static', filename='images/catchingfire.jpg') }}" alt="Catching Fire">
+        <h3>Catching Fire</h3>
+        <p>Author: Suzanne Collins</p>
+        <a href="#" class="btn">View Details</a>
+    </div>
+    <div class="book">
+        <img src="{{ url_for('static', filename='images/thehungergames.jpg') }}" alt="The Hunger Games">
+        <h3>The Hunger Games</h3>
+        <p>Author: Suzanne Collins</p>
+        <a href="#" class="btn">View Details</a>
+    </div>
+    <div class="book">
+        <img src="{{ url_for('static', filename='images/mockingjay.jpg') }}" alt="Mockingjay">
+        <h3>Mockingjay</h3>
+        <p>Author: Suzanne Collins</p>
+        <a href="#" class="btn">View Details</a>
+    </div>
+</section>
+{% endblock %}
